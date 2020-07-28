@@ -56,6 +56,8 @@ public class NewsFeed
         mp.like();
         mp.like();
         nf.addPost(mp);
+        EventPost ep = new EventPost("wim", "lid worden van");
+        nf.addPost(ep);
         nf.addPost(new MessagePost("betty", "wanneer komen er video's?"));
         nf.addPost(new PhotoPost("betty", "vakantie.jpg", "Op vakantie!"));
         PhotoPost pp = new PhotoPost("betty", "ardennen.jpg", "een dagje erop uit");
