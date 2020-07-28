@@ -69,9 +69,7 @@ public class Post {
     public void display()
     {
         System.out.println(username);
-        //System.out.println(message);
-        //System.out.println("  [" + filename + "]");
-        //System.out.println("  " + caption);
+        System.out.println(this);
         System.out.print(timeString(timestamp));
 
         if(likes > 0) {

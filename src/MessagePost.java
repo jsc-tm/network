@@ -38,9 +38,8 @@ public class MessagePost extends Post
         System.out.println("Message post from " + getUsername());
     }
 
-    public void display()
-    {
-        super.display();
-        System.out.println(message);
+    @Override
+    public String toString() {
+        return message;
     }
 }

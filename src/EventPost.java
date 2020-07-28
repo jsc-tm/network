@@ -15,4 +15,9 @@ public class EventPost extends Post {
         super.display();
         System.out.println(eventType);
     }
+
+    @Override
+    public String toString() {
+        return eventType;
+    }
 }

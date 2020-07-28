@@ -51,10 +51,8 @@ public class PhotoPost extends Post
         System.out.println("Photo post from " + getUsername());
     }
 
-    public void display()
-    {
-        super.display();
-        System.out.println("  [" + filename + "]");
-        System.out.println("  " + caption);
+    @Override
+    public String toString() {
+        return "  [" + filename + "]\n  " + caption;
     }
 }
