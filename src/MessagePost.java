@@ -39,7 +39,7 @@ public class MessagePost extends Post
     }
 
     @Override
-    public String toString() {
+    protected String displayContent() {
         return message;
     }
 }

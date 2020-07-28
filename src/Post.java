@@ -69,7 +69,7 @@ public class Post {
     public void display()
     {
         System.out.println(username);
-        System.out.println(this);
+        System.out.println(this.displayContent());
         System.out.print(timeString(timestamp));
 
         if(likes > 0) {
@@ -85,6 +85,10 @@ public class Post {
         else {
             System.out.println("   " + comments.size() + " comment(s). Click here to view.");
         }
+    }
+
+    protected String displayContent() {
+        return "";
     }
 
     /**

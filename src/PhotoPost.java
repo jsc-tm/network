@@ -52,7 +52,7 @@ public class PhotoPost extends Post
     }
 
     @Override
-    public String toString() {
+    protected String displayContent() {
         return "  [" + filename + "]\n  " + caption;
     }
 }

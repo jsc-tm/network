@@ -17,7 +17,7 @@ public class EventPost extends Post {
     }
 
     @Override
-    public String toString() {
+    protected String displayContent() {
         return eventType;
     }
 }
