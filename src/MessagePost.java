@@ -37,4 +37,9 @@ public class MessagePost extends Post
     public void printShortDetails() {
         System.out.println("Message post from " + getUsername());
     }
+
+    public void display()
+    {
+        System.out.println(message);
+    }
 }

@@ -50,4 +50,10 @@ public class PhotoPost extends Post
     public void printShortDetails() {
         System.out.println("Photo post from " + getUsername());
     }
+
+    public void display()
+    {
+        System.out.println("  [" + filename + "]");
+        System.out.println("  " + caption);
+    }
 }

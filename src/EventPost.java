@@ -9,4 +9,9 @@ public class EventPost extends Post {
     public String getEventType() {
         return eventType;
     }
+
+    public void display()
+    {
+        System.out.println(eventType);
+    }
 }
