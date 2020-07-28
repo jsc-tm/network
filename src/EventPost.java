@@ -12,6 +12,7 @@ public class EventPost extends Post {
 
     public void display()
     {
+        super.display();
         System.out.println(eventType);
     }
 }
