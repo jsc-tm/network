@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-abstract public class Post implements Review {
+abstract public class Post implements Review, Author {
     private String username;  // username of the post's author
     private long timestamp;
     private boolean reviewed = false;
@@ -19,6 +19,14 @@ abstract public class Post implements Review {
     public String getUsername() {
         return username;
     }
+
+    @Override
+    public String getAuthor() {
+        return username;
+    }
+
+    @Override
+    public void setAuthor(String author) {  }
 
     /**
      * Return the time of creation of this post.

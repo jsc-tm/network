@@ -1,4 +1,4 @@
-public class Blog implements Review {
+public class Blog implements Review, Author {
     private String author;
     private String text;
     private boolean reviewed = false;
@@ -9,10 +9,12 @@ public class Blog implements Review {
         this.text = text;
     }
 
+    @Override
     public String getAuthor() {
         return author;
     }
 
+    @Override
     public void setAuthor(String author) {
         this.author = author;
     }
