@@ -20,4 +20,9 @@ public class EventPost extends Post {
     protected String displayContent() {
         return eventType;
     }
+
+    @Override
+    public String toString() {
+        return "Event : " + eventType + " - user : " + this.getAuthor();
+    }
 }

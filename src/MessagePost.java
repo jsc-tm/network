@@ -42,4 +42,9 @@ public class MessagePost extends CommentedPost
     protected String displayContent() {
         return message;
     }
+
+    @Override
+    public String toString() {
+        return "Message : " + message + " - user : " + this.getAuthor();
+    }
 }

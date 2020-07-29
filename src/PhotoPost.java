@@ -55,4 +55,9 @@ public class PhotoPost extends CommentedPost
     protected String displayContent() {
         return "  [" + filename + "]\n  " + caption;
     }
+
+    @Override
+    public String toString() {
+        return "Photo : [" + filename + "] " + caption + " - user : " + this.getAuthor();
+    }
 }

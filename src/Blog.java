@@ -52,4 +52,9 @@ public class Blog implements Review {
     public void unpublish() {
         setPublished(false);
     }
+
+    @Override
+    public String toString() {
+        return "Blog : " + text + " - auteur : " + this.getAuthor();
+    }
 }
