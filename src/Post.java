@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-abstract public class Post implements Review, Author {
+abstract public class Post implements Review {
     private String username;  // username of the post's author
     private long timestamp;
     private boolean reviewed = false;

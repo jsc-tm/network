@@ -1,4 +1,4 @@
-public class Blog implements Review, Author {
+public class Blog implements Review {
     private String author;
     private String text;
     private boolean reviewed = false;

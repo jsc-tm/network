@@ -1,4 +1,4 @@
-public interface Review {
+public interface Review extends Author {
     boolean isReviewed();
     boolean isPublished();
     void setPublished(boolean publish);
