@@ -44,8 +44,10 @@ public class NewsFeed
     {
         // display all posts
         for(Post post : posts) {
-            post.display();
-            System.out.println();   // empty line between posts
+            if (post.isPublished()) {
+                post.display();
+                System.out.println();   // empty line between posts
+            }
         }
     }
     
@@ -55,8 +57,10 @@ public class NewsFeed
         mp.addComment("toch niet helemaal akkoord...");
         mp.like();
         mp.like();
+        mp.publish();
         nf.addPost(mp);
         EventPost ep = new EventPost("wim", "lid worden van");
+        ep.publish();
         nf.addPost(ep);
         nf.addPost(new MessagePost("betty", "wanneer komen er video's?"));
         nf.addPost(new PhotoPost("betty", "vakantie.jpg", "Op vakantie!"));

@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
-abstract public class Post {
+abstract public class Post implements Review {
     private String username;  // username of the post's author
     private long timestamp;
+    private boolean reviewed = false;
+    private boolean published = false;
 
     /**
      * Constructor for objects of class Post.
@@ -64,5 +66,31 @@ abstract public class Post {
         else {
             return seconds + " seconds ago";
         }
+    }
+
+    @Override
+    public boolean isReviewed() {
+        return reviewed;
+    }
+
+    @Override
+    public boolean isPublished() {
+        return published;
+    }
+
+    @Override
+    public void setPublished(boolean publish) {
+        published = publish;
+        if (publish) reviewed = true;
+    }
+
+    @Override
+    public void publish() {
+        setPublished(true);
+    }
+
+    @Override
+    public void unpublish() {
+        setPublished(false);
     }
 }
