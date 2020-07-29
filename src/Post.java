@@ -3,8 +3,6 @@ import java.util.ArrayList;
 public class Post {
     private String username;  // username of the post's author
     private long timestamp;
-    private int likes;
-    private ArrayList<String> comments;
 
     /**
      * Constructor for objects of class Post.
@@ -14,40 +12,10 @@ public class Post {
     public Post(String author) {
         username = author;
         timestamp = System.currentTimeMillis();
-        likes = 0;
-        comments = new ArrayList<String>();
     }
 
     public String getUsername() {
         return username;
-    }
-
-    /**
-     * Record one more 'Like' indication from a user.
-     */
-    public void like()
-    {
-        likes++;
-    }
-
-    /**
-     * Record that a user has withdrawn his/her 'Like' vote.
-     */
-    public void unlike()
-    {
-        if (likes > 0) {
-            likes--;
-        }
-    }
-
-    /**
-     * Add a comment to this post.
-     *
-     * @param text  The new comment to add.
-     */
-    public void addComment(String text)
-    {
-        comments.add(text);
     }
 
     /**
@@ -71,20 +39,6 @@ public class Post {
         System.out.println(username);
         System.out.println(this.displayContent());
         System.out.print(timeString(timestamp));
-
-        if(likes > 0) {
-            System.out.println("  -  " + likes + " people like this.");
-        }
-        else {
-            System.out.println();
-        }
-
-        if(comments.isEmpty()) {
-            System.out.println("   No comments.");
-        }
-        else {
-            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
-        }
     }
 
     protected String displayContent() {
