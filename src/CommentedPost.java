@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class CommentedPost extends Post {
+abstract public class CommentedPost extends Post {
     private int likes;
     private ArrayList<String> comments;
 
