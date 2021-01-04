@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Post {
     private String username;  // username of the post's author
     private long timestamp;
